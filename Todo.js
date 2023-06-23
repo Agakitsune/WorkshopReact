@@ -13,14 +13,24 @@ import {
 import {styles} from './App';
 import { CustomButton } from './CustomButton';
 
+const style = StyleSheet.create({
+  entry: {
+    flex: 1,
+    flexDirection: 'row',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
+});
+
 const ScrollRate = ({ list, update }) => {
     console.log("Scroll", list)
     return (
-        <ScrollView styles={styles.view}>
+        <ScrollView style={styles.view}>
             {
                 list.map((item) => {
                     return (
-                        <View styles={styles.entry}>
+                        <View style={style.entry}>
                             <Switch
                                 onValueChange={(value) => {item.trigger = value; update(list)}}
                                 value={item.trigger}/>
@@ -28,16 +38,6 @@ const ScrollRate = ({ list, update }) => {
                         </View>
                     )
                 })
-                // list.forEach((entry) => {
-                //     return (
-                //         <View style={styles.entry}>
-                //             {/* <Switch */}
-                //                 {/* // onValueChange={() => {entry.trigger = !entry.trigger; update(list)}} */}
-                //                 {/* // value={entry.trigger}/> */}
-                //             <Text>{entry.text}</Text>
-                //         </View>
-                //     )
-                // })
             }
         </ScrollView>
     )

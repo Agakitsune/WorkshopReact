@@ -43,13 +43,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  entry: {
-    flex: 1,
-    flexDirection: 'row',
-    backgroundColor: '#eee',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-  },
   button: {
     alignItems: 'center',
     backgroundColor: '#DDDDDD',
@@ -70,6 +63,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   view: {
-    maxWidth: 500
+    maxHeight: 500,
+    width: '90%',
   }
 });
